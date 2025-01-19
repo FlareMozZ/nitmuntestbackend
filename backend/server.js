@@ -17,7 +17,7 @@ const mailer = require("./routes/nodemailer");
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    limit: 30, // Limit each IP to 100 requests per `window` (15 minutes)
+    limit: 500, // Limit each IP to 100 requests per `window` (15 minutes)
     standardHeaders: 'draft-8', // Use the combined `RateLimit` header
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 });
